@@ -1,5 +1,6 @@
 # @arcticwallet/arctic-dns
 ### NOTE you need to provide BLOCKCHAIN_NODE_ADDRESSES to constructor
+### also node addresses used in jest tests, please make a setup for jest config
 Available methods
 
 ```const p = new Providers({bnb_bep20: 'node_address', eth: 'node_address''})```
