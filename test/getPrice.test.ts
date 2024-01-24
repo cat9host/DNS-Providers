@@ -1,4 +1,4 @@
-import { getPrice } from '../src';
+import { Providers } from '../src';
 afterAll(async () => {
   await new Promise((resolve) => {
     setTimeout(() => {
@@ -9,19 +9,24 @@ afterAll(async () => {
 
 describe('test getPrice function', () => {
   it('should return true', () => {
-    getPrice('cat9h0st').then((result) => {
+    const p = new Providers({
+      bnb_bep20: '',
+      matic_mrc20: '',
+      eth: ''
+    })
+    p.getPrice('cat9h0st').then((result) => {
       expect(result.status).toBe(false);
       expect(result.errorCode).toBe(2);
     });
-    getPrice('9h0st.ru').then((result) => {
+    p.getPrice('9h0st.ru').then((result) => {
       expect(result.status).toBe(false);
       expect(result.errorCode).toBe(1);
     });
-    getPrice('cat').then((result) => {
+    p.getPrice('cat').then((result) => {
       expect(result.status).toBe(true);
       expect(result.errorCode).toBe(null);
     });
-    getPrice('catasdasdasdasdasdasdasdasdas').then((result) => {
+    p.getPrice('catasdasdasdasdasdasdasdasdas').then((result) => {
       expect(result.status).toBe(true);
       expect(result.errorCode).toBe(null);
     });
