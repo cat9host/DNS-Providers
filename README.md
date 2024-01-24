@@ -1,5 +1,5 @@
 # @arcticwallet/arctic-dns
-
+### NOTE you need to provide BLOCKCHAIN_NODE_ADDRESSES to constructor
 Available methods
 
 ```const p = new Providers({bnb_bep20: 'node_address', eth: 'node_address''})```
