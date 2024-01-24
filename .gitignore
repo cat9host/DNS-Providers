@@ -1,0 +1,11 @@
+node_modules/
+.env
+logs/
+.idea/
+.DS_Store
+.vscode/
+.ssh/
+.bash_history
+*.retry
+*.log
+*.log.*
